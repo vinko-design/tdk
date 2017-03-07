@@ -50,7 +50,7 @@ main {
 
 #hero {
     height: 100vh;
-    background-image: url('/img/dark_hero-image_job-site.jpg');
+    background-image: url('../img/dark_hero-image_job-site.jpg');
     background-size: cover;
     background-position: center top;
 /*    color: #282425;*/
@@ -114,21 +114,21 @@ main {
 }
 
 .pattern.overlay {
-    background-image: url('/img/old_mathematics_@2X.png');
+    background-image: url('../img/old_mathematics_@2X.png');
     background-size: 240px;
     opacity: 0.2;
 }
 
 #about-us {
     height: 100vh;
-    background-image: url('/img/about-us-img.jpg');
+    background-image: url('../img/about-us-img.jpg');
     background-position: left bottom;
     background-size: cover;
 }
 
 #services {
     height: 100vh;
-    background-image: url('/img/services-img.jpg');
+    background-image: url('../img/services-img.jpg');
     background-position: left bottom;
     background-size: cover;
 }
