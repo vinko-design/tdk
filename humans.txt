@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+    <Vinko Kraljevic>  -- <Web Design / Graphic Design> -- <www.vinko.com.au>
+
+# THANKS
+
+    <name>
+    <Tom Medak>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    jQuery, Normalize.css
