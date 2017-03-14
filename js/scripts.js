@@ -19,6 +19,34 @@ $(function() {
         
     });
     
+    var servicesImgContainerWidth = $('#services .images-container').width();
+    var servicesListHeight = $('#services-list').height();
+    var imagesInRow = Math.floor(servicesImgContainerWidth/150);
+    var imagesInColumn = Math.ceil(servicesListHeight/150);
+    
+    //Services Page images
+    $(window).on('resize', function() {
+        $('.services-img-container').show();
+
+        if (imagesInRow === 4 || imagesInRow === 2) {
+            $('.services-img-container:last-child').hide();
+        }
+        
+        console.log('IMAGES_IN_ROW: '+imagesInRow+', WIDTH_OF_IMAGES_CONTAINER: '+servicesImgContainerWidth+', HEIGHT_OF_LIST: '+servicesListHeight);
+    })
+    
+    if (imagesInRow === 4 || imagesInRow === 2) {
+            $('.services-img-container:last-child').hide();
+    }
+
+    if (imagesInRow === 2 && imagesInColumn === 4) {
+        $('.services-img-container:nth-child(6)').nextAll().hide();
+    }
+    
+    
+    
+    
+    
     //Activate Scrollspy
     $('body').scrollspy({
         target: 'header .navbar',

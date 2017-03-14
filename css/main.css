@@ -126,15 +126,33 @@ main {
     background-size: cover;
 }
 
-#services {
-    height: 100vh;
-    background-image: url('../img/services-img.jpg');
-    background-position: left bottom;
-    background-size: cover;
+
+
+.services-img-container {
+/*    height: 150px;*/
+    width: 50%;
+    padding: 0;
+    float: right;
+}
+
+.services-img-container img {
+    width:100%;
+}
+
+#services-content { 
+    background-color: rgba(255,255,255,0.6);
+}
+
+.images-container {
+}
+
+.screen-sizes {
+    margin-top: 50px;
+    font-size: 20px;
 }
 
 h1 {
-    padding-top: 5vh;
+/*    padding-top: 5vh;*/
     padding-bottom: 5px;
     text-align: center;
     font-size: 3em;
@@ -175,7 +193,7 @@ article.about-us {
     }
     
     h1 {
-        padding-top: 15vh;
+/*        padding-top: 15vh;*/
     }
     
     article.about-us {
@@ -184,6 +202,23 @@ article.about-us {
     
     #services ul {
         font-size: 1.25em;
+    }
+    
+    #services-content { 
+        margin-bottom:50px;
+    }
+    
+    .services-img-container {
+/*        height: 150px;*/
+        width: 25%;
+        padding: 0;
+    /*    float: right;*/
+    }
+    
+    #services {
+        background-image: url('../img/services-img.jpg');
+        background-position: left bottom;
+        background-size: cover;
     }
     
     .navbar-nav {
@@ -213,4 +248,15 @@ article.about-us {
 
 }
 
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .services-img-container {
+/*        height: 150px;*/
+        width: 33.33%;
+/*        width: auto;*/
+        padding: 0;
+    /*    float: right;*/
+    }
+}
 
