@@ -20,29 +20,49 @@ $(function() {
     });
     
     var servicesImgContainerWidth = $('#services .images-container').width();
-    var servicesListHeight = $('#services-list').height();
+    var servicesListHeight;
     var imagesInRow = Math.floor(servicesImgContainerWidth/150);
+    var imagesWidth = $('#services .images-container img').width();
     var imagesInColumn = Math.ceil(servicesListHeight/150);
+    var thirdOfServicesListHeight;
+    
+    
+    function imageSizing() {
+        servicesListHeight = $('#services-list').innerHeight();
+//        $('.services-img-container').show();
+//
+//        thirdOfServicesListHeight = servicesListHeight/3;
+//        console.log(thirdOfServicesListHeight);
+//        
+//        if (servicesListHeight) {
+//        
+//        }
+//        
+//        if (servicesListHeight > servicesImgContainerWidth) {
+//            console.log('TEXT IS TALLER');
+//            $('.services-img-container').css({
+//                'height': thirdOfServicesListHeight+'px',
+//                'width': thirdOfServicesListHeight+'px',
+//            });
+//        }
+//        
+//        if (imagesInColumn > 3 && imagesInRow < 3) {
+//            $('.services-img-container:nth-child(6)').nextAll().hide();
+//        }
+//        
+//        console.log('IMAGES_IN_ROW: '+imagesInRow+', WIDTH_OF_IMAGES_CONTAINER: '+servicesImgContainerWidth+', HEIGHT_OF_LIST: '+servicesListHeight);
+        $('.services-img-container').css({
+            'height': servicesListHeight/3+'px',
+            'width': servicesListHeight/3+'px',
+        });
+    }
+    
+    imageSizing();
     
     //Services Page images
     $(window).on('resize', function() {
-        $('.services-img-container').show();
-
-        if (imagesInRow === 4 || imagesInRow === 2) {
-            $('.services-img-container:last-child').hide();
-        }
-        
-        console.log('IMAGES_IN_ROW: '+imagesInRow+', WIDTH_OF_IMAGES_CONTAINER: '+servicesImgContainerWidth+', HEIGHT_OF_LIST: '+servicesListHeight);
+        imageSizing();
     })
-    
-    if (imagesInRow === 4 || imagesInRow === 2) {
-            $('.services-img-container:last-child').hide();
-    }
-
-    if (imagesInRow === 2 && imagesInColumn === 4) {
-        $('.services-img-container:nth-child(6)').nextAll().hide();
-    }
-    
     
     
     
