@@ -19,51 +19,31 @@ $(function() {
         
     });
     
-    var servicesImgContainerWidth = $('#services .images-container').width();
-    var servicesListHeight;
-    var imagesInRow = Math.floor(servicesImgContainerWidth/150);
-    var imagesWidth = $('#services .images-container img').width();
-    var imagesInColumn = Math.ceil(servicesListHeight/150);
-    var thirdOfServicesListHeight;
+    //SERVICES IMG HEIGHT SETTING/RESPONSIVITY
+    var servicesListHeight = $('#services-list').innerHeight();
     
+    $('#services .images-container').css('height',servicesListHeight+'px');
     
-    function imageSizing() {
+    $(window).on('resize', function(){
+        console.log('resizing bitch!');
         servicesListHeight = $('#services-list').innerHeight();
-//        $('.services-img-container').show();
-//
-//        thirdOfServicesListHeight = servicesListHeight/3;
-//        console.log(thirdOfServicesListHeight);
-//        
-//        if (servicesListHeight) {
-//        
-//        }
-//        
-//        if (servicesListHeight > servicesImgContainerWidth) {
-//            console.log('TEXT IS TALLER');
-//            $('.services-img-container').css({
-//                'height': thirdOfServicesListHeight+'px',
-//                'width': thirdOfServicesListHeight+'px',
-//            });
-//        }
-//        
-//        if (imagesInColumn > 3 && imagesInRow < 3) {
-//            $('.services-img-container:nth-child(6)').nextAll().hide();
-//        }
-//        
-//        console.log('IMAGES_IN_ROW: '+imagesInRow+', WIDTH_OF_IMAGES_CONTAINER: '+servicesImgContainerWidth+', HEIGHT_OF_LIST: '+servicesListHeight);
-        $('.services-img-container').css({
-            'height': servicesListHeight/3+'px',
-            'width': servicesListHeight/3+'px',
-        });
-    }
+        $('#services .images-container').css('height',servicesListHeight+'px');
+    });
     
-    imageSizing();
+    //SERVICES IMAGE ROTATION
+    var servicesImgArray = ['img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7' ];
+    var activeImg = 0;
     
-    //Services Page images
-    $(window).on('resize', function() {
-        imageSizing();
-    })
-    
+    setInterval(function(){
+        activeImg++;
+        if (activeImg > 6) {
+            activeImg = 0;
+        }
+        $('.services-images').removeClass('active');
+        $('.services-images.'+servicesImgArray[activeImg]).addClass('active');
+        
+        console.log('Active Image: '+activeImg);
+    },5000);
     
     
     
