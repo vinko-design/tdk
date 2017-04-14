@@ -45,7 +45,10 @@ $(function() {
         console.log('Active Image: '+activeImg);
     },5000);
     
-    
+    //ARRANGE A MEETING CTA
+    $('#arrange-meeting-cta').on('click', function(){
+        
+    })
     
     //Activate Scrollspy
     $('body').scrollspy({
