@@ -25,7 +25,7 @@ $(function() {
     $('#services .images-container').css('height',servicesListHeight+'px');
     
     $(window).on('resize', function(){
-        console.log('resizing bitch!');
+//        console.log('resizing bitch!');
         servicesListHeight = $('#services-list').innerHeight();
         $('#services .images-container').css('height',servicesListHeight+'px');
     });
