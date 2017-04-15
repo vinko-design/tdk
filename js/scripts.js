@@ -47,7 +47,7 @@ $(function() {
     
     //ARRANGE A MEETING CTA
     $('#arrange-meeting-cta').on('click', function(){
-        
+        $('#arrange-meeting-overlay').addClass('clicked');
     })
     
     //Activate Scrollspy
